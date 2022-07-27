@@ -61,23 +61,14 @@ body{
 }
 .mainText{
     display: flex;
+    flex-direction: column;
     position: absolute;
     top: 30%;
     left: 15%;
-    font-size: 275%;
+    font-size: 225%;
     font-family: 'Oswald', sans-serif;
 }
-.subMainText{
-    display: flex;
-    position: absolute;
-    top: 37%;
-    left: 15%;
-    font-size: 200%;
-    font-family: 'Oswald', sans-serif;
-}
-
 .subText{
-    position: absolute;
     font-size: 65%;
     font-family: 'Oswald', sans-serif;
 }
