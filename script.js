@@ -141,10 +141,11 @@ let main = () => {
   var textOfMain = document.getElementsByTagName("p");
   if(State == "pyphone"){
     textOfTitle[0].innerHTML = "Apresentando o <strong>PyPhone 4</strong>";
-    textOfMain[0].textContent = "Mais rapido";
-    textOfMain[1].textContent = "Biodegradável";
-    textOfMain[2].textContent = "Cabe na palma da mão";
-    textOfMain[3].textContent = "À prova d'água";
+    textOfMain[0].textContent = "Agora estiloso e muito mais ergonômico, sim Pear.";
+    textOfMain[1].textContent = "Mais rapido";
+    textOfMain[2].textContent = "Biodegradável";
+    textOfMain[3].textContent = "Cabe na palma da mão";
+    textOfMain[4].textContent = "À prova d'água";
 
   }else if (State == "pac"){
     textOfTitle[0].innerHTML = "Apresentando o <strong>Pac Book Pro</strong>";
@@ -152,12 +153,14 @@ let main = () => {
     textOfMain[1].textContent = "Bateria dura semanas";
     textOfMain[2].textContent = "Teclado orgânico";
     textOfMain[3].textContent = "Ja vem com o Sistema Operacional PearOS";
+    textOfMain[4].textContent = "Ótimo para estudar e trabalhar";
   }else if (State == "pypad"){
     textOfTitle[0].innerHTML = "Apresentando o <strong>PyPad Max 2</strong>";
     textOfMain[0].textContent = "Camera 4k";
     textOfMain[1].textContent = "Ergonômico";
     textOfMain[2].textContent = "Tela Super Vled";
     textOfMain[3].textContent = "Utiliza Sistema Operacional PearOS Peartable";
+    textOfMain[4].textContent = "Leve para qualquer lugar";
   }
   else if (State == "pytv"){
     textOfTitle[0].innerHTML = "Apresentando o <strong>PyTv Vision</strong>";
@@ -165,6 +168,7 @@ let main = () => {
     textOfMain[1].textContent = "Som Sosurand 3";
     textOfMain[2].textContent = "Tela TV Touch";
     textOfMain[3].textContent = "Suporta 5G wireless";
+    textOfMain[4].textContent = "Para toda a família!";
   }
 
   // create and renders 3d objects
