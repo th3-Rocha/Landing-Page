@@ -19,22 +19,24 @@
             <img class="pear" src="svg/pear.svg">
             <h1 class="pearText">Pear.</h1>
             <nav class = "navigate">
-                <a >LOJA</a>
-                <a >PAC</a>
-                <a >PYPHONE</a>
-                <a >PYPAD</a>
-                <a >SUPORTE</a>
+                <a href="">LOJA</a>
+                <a href="">PAC</a>
+                <a href="">PYPHONE</a>
+                <a href="">PYPAD</a>
+                <a href="">SUPORTE</a>
             </nav>
         </div>
     </header>
     <main>
         <div class="mainText">
-            <h3> Apresentando o <strong>PyPhone 4</strong></h3>
-            <p>Agora estiloso e muito mais ergonômico, sim <strong>Pear.</strong></p>
-            <p class="subText">Mais rapido</p>
-            <p class="subText" >Biodegradável</p>
-            <p class="subText">Cabe na palma da mão</p>
-            <p class="subText">À prova d'água</p>
+            <h3 id = "text" class = "hoverUp"> Apresentando o <strong>PyPhone 4</strong></h3>
+            <p>Agora estiloso e muito mais ergonômico, sim Pear.</p>
+            <div class="subText">
+                <p >Mais rapido</p>
+                <p >Biodegradável</p>
+                <p >Cabe na palma da mão</p>
+                <p >À prova d'água</p>
+            </div>
         </div>
 
         
@@ -42,10 +44,10 @@
     </main>
     <footer> 
         <div class = "dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <span onclick="stateFunction('pyphone')" class="dot"></span>
+            <span onclick="stateFunction('pac')" class="dot"></span>
+            <span onclick="stateFunction('pypad')"  class="dot"></span>
+            <span onclick="stateFunction('pytv')"  class="dot"></span>
         </div>
     </footer>
     <!-- import three and gltfLoader -->

@@ -14,7 +14,7 @@ body{
 }
 
 
-#canvas {
+#canvas{ 
     position: absolute;
     width: 100%;
     height: 100%;
@@ -59,6 +59,16 @@ body{
     width: 100%;
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
+
+.hoverUp{
+    transform-origin: bottom left;
+    transition: all .3s ease-in-out;
+    
+}
+.hoverUp:hover{
+     transform: scale(1.75);
+}
+
 .mainText{
     display: flex;
     flex-direction: column;
@@ -72,6 +82,7 @@ body{
     font-size: 65%;
     font-family: 'Oswald', sans-serif;
 }
+
 
 .gg-chevron-right {
     box-sizing: border-box;
