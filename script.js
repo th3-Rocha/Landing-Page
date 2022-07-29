@@ -38,7 +38,7 @@ let createScene = () => {
   container.appendChild(renderer.domElement);
   window.addEventListener("resize", handleWindowResize, true);
   const geometry = new THREE.CircleGeometry( 5, 64 );
-  const material = new THREE.MeshBasicMaterial( { color: 0x14F9E5 } );
+  const material = new THREE.MeshBasicMaterial( { color: 0xffa500 } );
   const circle = new THREE.Mesh( geometry, material );
   scene.add( circle );
   circle.scale.set(2, 2, 2);
