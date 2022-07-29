@@ -9,13 +9,9 @@ let scene,
   object,
   HEIGHT,
   WIDTH;
-let State;
-
-if(State == null){
-  State = "pyphone";
-}
-
+let State = "pyphone";
 let createScene = () => {
+  
   HEIGHT = window.innerHeight;
   WIDTH = window.innerWidth;
   scene = new THREE.Scene();
@@ -53,53 +49,21 @@ let createScene = () => {
     loader.load( "gltf/PyPhone.gltf",
       (gltf) => {
         object = gltf.scene;
-        object.position.y = 5;
+        object.position.y = -5;
         object.position.z = 0;
         object.position.x = 25;
-        object.scale.set(6,6,6);
-        scene.add(object);
-      }
-    );
-  }
-  else if (State == "pac"){
-    loader.load( "gltf/Pac.gltf",
-      (gltf) => {
-        object = gltf.scene;
-        object.position.y = 5;
-        object.position.z = 0;
-        object.position.x = 25;
-        object.scale.set(6,6,6);
-        scene.add(object);
-      }
-    );
-  }
-  else if (State == "pypad"){
-    loader.load( "gltf/PyPad.gltf",
-      (gltf) => {
-        object = gltf.scene;
-        object.position.y = 5;
-        object.position.z = 0;
-        object.position.x = 25;
-        object.scale.set(6,6,6);
-        scene.add(object);
-      }
-    );
-  }
-  else if (State == "pytv"){
-    loader.load( "gltf/PyTv.gltf",
-      (gltf) => {
-        object = gltf.scene;
-        object.position.y = 5;
-        object.position.z = 0;
-        object.position.x = 25;
-        object.scale.set(6,6,6);
+        object.scale.set(2,2,2);
         scene.add(object);
       }
     );
   }
 };
 
-
+let stateFunction = (name) =>{
+  State = name;
+  console.log(State);
+  
+}
 
 const handleWindowResize = () => {
   HEIGHT = window.innerHeight;
@@ -112,7 +76,7 @@ const handleWindowResize = () => {
 const createLights = () => {
   const ambientLight = new THREE.HemisphereLight(0x404040, 0x404040,5);
 
-  const directionalLight = new THREE.DirectionalLight(0xdfebff, 2);
+  const directionalLight = new THREE.DirectionalLight(0xdfebff, 3);
   directionalLight.position.set(-300, 0, 600);
 
   const pointLight = new THREE.PointLight(0xf9e514, 2, 500, 015);
@@ -123,54 +87,23 @@ const createLights = () => {
 
 
 const loop = () => {
+  console.log(State);
   renderer.render(scene, camera);
+  renderer.outputEncoding = THREE.sRGBEncoding;
   if (object) {
     object.rotation.y -= 0.01;
   }
+  
   requestAnimationFrame(loop);
+
 };
 
 
-let stateFunction = (name) =>{
-  State = name;
-  console.log(name);
-}
 
 let main = () => {
+ // stateFunction();
   var textOfTitle = document.getElementsByTagName("h3");
   var textOfMain = document.getElementsByTagName("p");
-  if(State == "pyphone"){
-    textOfTitle[0].innerHTML = "Apresentando o <strong>PyPhone 4</strong>";
-    textOfMain[0].textContent = "Agora estiloso e muito mais ergonômico, sim Pear.";
-    textOfMain[1].textContent = "Mais rapido";
-    textOfMain[2].textContent = "Biodegradável";
-    textOfMain[3].textContent = "Cabe na palma da mão";
-    textOfMain[4].textContent = "À prova d'água";
-
-  }else if (State == "pac"){
-    textOfTitle[0].innerHTML = "Apresentando o <strong>Pac Book Pro</strong>";
-    textOfMain[0].textContent = "Ultra Leve";
-    textOfMain[1].textContent = "Bateria dura semanas";
-    textOfMain[2].textContent = "Teclado orgânico";
-    textOfMain[3].textContent = "Ja vem com o Sistema Operacional PearOS";
-    textOfMain[4].textContent = "Ótimo para estudar e trabalhar";
-  }else if (State == "pypad"){
-    textOfTitle[0].innerHTML = "Apresentando o <strong>PyPad Max 2</strong>";
-    textOfMain[0].textContent = "Camera 4k";
-    textOfMain[1].textContent = "Ergonômico";
-    textOfMain[2].textContent = "Tela Super Vled";
-    textOfMain[3].textContent = "Utiliza Sistema Operacional PearOS Peartable";
-    textOfMain[4].textContent = "Leve para qualquer lugar";
-  }
-  else if (State == "pytv"){
-    textOfTitle[0].innerHTML = "Apresentando o <strong>PyTv Vision</strong>";
-    textOfMain[0].textContent = "Tela Ultra Luminosa";
-    textOfMain[1].textContent = "Som Sosurand 3";
-    textOfMain[2].textContent = "Tela TV Touch";
-    textOfMain[3].textContent = "Suporta 5G wireless";
-    textOfMain[4].textContent = "Para toda a família!";
-  }
-
   // create and renders 3d objects
   createScene();
   createLights();
