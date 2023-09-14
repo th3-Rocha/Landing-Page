@@ -35,7 +35,7 @@ https://th3-rocha.github.io/Landing-Page
 
 ## Credits
 
-3D models created by [Artist Name] 
+3D models created by Murilo da Rocha 
 
 ## License
 
