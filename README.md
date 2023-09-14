@@ -1,8 +1,6 @@
-Here is a draft README.md for this project repository:
-
 # Pear Website
 
-This is the code for the Pear company website, showcasing their line of fictional products including the PyPhone, PyPad, and more. 
+This is the code for the Pear company(fictional) website, showcasing their line of fictional products including the PyPhone, PyPad, and more. 
 
 ## Contents
 
